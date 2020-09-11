@@ -1,0 +1,178 @@
+/*master.css*/
+
+/* consideraciones css globales*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    /*arriba abajo 0, y los costados es automatico*/
+}
+
+img {
+ width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*----   css del header----*/
+.header {
+background-color: rgb(143, 143, 144);
+
+
+}
+.logo {
+    width: 100%;  
+    
+
+}
+.opciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.menu {
+    
+    width: 100%;
+    
+}
+
+.opciones li a {
+    color: black;
+    font-family: monospace;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: xxx-large;
+    text-align: center;
+    justify-content: space-around;
+    
+    
+}
+.opciones li {
+    text-align: center;
+}
+
+.opciones li a:hover {  /*cuando paso por arriba del cursor*/
+    text-decoration-line: underline;
+}
+
+/*-------  css imagen--------*/
+.imagen {
+    display: none;
+    background-image: url('../img/presentacionFrascos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /*queda fija, no sigue con el scroll*/
+    height: 1000px;
+}
+/*______ productos ccss */
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center ;
+    background-color: rgb(143, 143, 144);
+}
+.productos article {
+    padding: 10px;
+    
+}
+.productos article img {
+    border-radius: 10px;
+    height: 100%;
+    
+}
+
+/*-------  css footer--------*/
+
+.footer {
+    height: 20vh;
+    background-color: rgb(143, 143, 144);
+    color: black;
+    display: flex;
+    /* para alinear*/
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 0;
+    text-align: center;
+    
+}
+h2 {
+    display: flex;
+    justify-content: space-around;
+} 
+
+h2 a {
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+
+/*Abajo de todo van las media queries*/
+
+@media (min-width: 768px) {
+    .logo {
+        width: 80%;
+    }
+    .imagen {
+        display: block;
+    }
+
+    .productos {
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+    /*ojo si tiene clase o no! respecto a eso punto o no punto*/
+    article {
+     width: 50%;
+    }
+    .footer {
+        justify-content: space-between;
+        
+        flex-direction: row;
+        align-items: center;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .logo {
+         width: 30%;
+        
+    
+    }
+    .opciones {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu {
+        width: 70%
+    }
+
+    .header {
+        display: flex;
+        box-sizing: border-box;
+        margin: 0 0;
+        align-items: center;
+    }
+    
+    article {
+        width: 33%;
+    }
+
+    .footer {
+        
+        align-items: center;
+            
+    }
+}
